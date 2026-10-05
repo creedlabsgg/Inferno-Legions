@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layouts - Inferno Legions</title>
+  <link rel="icon" type="image/png" href="assets/troops/badge.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { padding-top: 80px; } /* Offset for fixed navbar on subpages */
+    .bg-layouts { background: url('assets/hero-bg.jpg') center/cover no-repeat; }
+    .layout-card { background: rgba(20,20,30,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  </style>
+</head>
+<body class="bg-layouts">
+  <div id="navbar-placeholder"></div>
+
+  <!-- ========== LAYOUTS ========== -->
+  <section class="section" id="layouts" style="min-height: 70vh; padding-top: 4rem;">
+    <div class="container">
+      <h2 class="section-title text-center" style="font-size: 4rem; margin-bottom: 1rem; color: #ffcc00;">War Bases & Layouts</h2>
+      <p class="section-subtitle text-center" style="font-size: 1.5rem; max-width: 800px; margin: 0 auto 3rem auto;">Premium base links for our members. Anti-3 Star, Anti-2 Star, and Legend League push bases.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        
+        <div class="layout-card">
+          <h3 style="color: #ffcc00; font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin-bottom: 0.5rem;">TH16 Anti-3 Star</h3>
+          <p style="color: #a1a1aa; margin-bottom: 1.5rem;">Used in CWL Champion League. Defends root riders and dragons perfectly.</p>
+          <a href="#" class="coc-btn coc-btn--green">Copy Link</a>
+        </div>
+        
+        <div class="layout-card">
+          <h3 style="color: #ffcc00; font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin-bottom: 0.5rem;">TH15 Teaser Base</h3>
+          <p style="color: #a1a1aa; margin-bottom: 1.5rem;">Baits attackers from the Townhall side into heavy traps.</p>
+          <a href="#" class="coc-btn coc-btn--green">Copy Link</a>
+        </div>
+        
+        <div class="layout-card">
+          <h3 style="color: #ffcc00; font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin-bottom: 0.5rem;">TH14 Legend League</h3>
+          <p style="color: #a1a1aa; margin-bottom: 1.5rem;">High trophy pushing base focused on saving the 2-star.</p>
+          <a href="#" class="coc-btn coc-btn--green">Copy Link</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js" defer></script>
+</body>
+</html>

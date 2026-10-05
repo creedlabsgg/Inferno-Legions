@@ -1,0 +1,24 @@
+{
+  "name": "clan---inferno-legions",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "api": "node api/server.js",
+    "start": "node api/server.js & vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "clashofclans.js": "^4.0.5",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-fetch": "^2.7.0"
+  }
+}

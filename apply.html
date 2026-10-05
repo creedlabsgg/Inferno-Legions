@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply to Join - Inferno Legions</title>
+  <link rel="icon" type="image/png" href="assets/troops/badge.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { padding-top: 80px; background: #0a0a0c; color: #fff; overflow-x: hidden; }
+
+    
+    .apply-section {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 1rem 8rem;
+      position: relative;
+    }
+
+    .apply-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/bg/village_bg.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.2) contrast(1.1);
+      z-index: 0;
+    }
+
+    .apply-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(20,0,0,0.6) 100%);
+      z-index: 1;
+      backdrop-filter: blur(5px);
+    }
+
+    .form-wrapper {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 550px;
+      margin-top: 4rem; /* space for overlapping troop */
+    }
+
+    .overlap-troop {
+      position: absolute;
+      top: -140px;
+      right: -30px;
+      width: 240px;
+      z-index: 20;
+      pointer-events: none;
+      filter: drop-shadow(-10px 15px 15px rgba(0,0,0,0.6));
+      transform: scaleX(-1);
+    }
+
+    .form-container {
+      background: rgba(15, 15, 20, 0.7);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2rem;
+      padding: 3.5rem;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 2px 20px rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-container::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .form-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-group {
+      margin-bottom: 1.8rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000;
+      text-transform: uppercase;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      background: rgba(0,0,0,0.4);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .form-group input::placeholder, .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--coc-blue);
+      background: rgba(0,0,0,0.6);
+      box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+    }
+
+    .form-group select option {
+      background: #111;
+      color: white;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.2rem;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(180deg, #ff9800 0%, #f57c00 100%);
+      border: 3px solid #000;
+      border-radius: 1rem;
+      box-shadow: inset 0 3px 0 rgba(255,255,255,0.4), 0 8px 0 #b35900, 0 15px 20px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: all 0.1s ease;
+      margin-top: 1rem;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+      display: block;
+    }
+    
+    .submit-btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .submit-btn:active {
+      transform: translateY(6px);
+      box-shadow: inset 0 3px 0 rgba(255,255,255,0.4), 0 2px 0 #b35900, 0 5px 10px rgba(0,0,0,0.5);
+    }
+    
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 2rem;
+        border-radius: 1.5rem;
+      }
+      .overlap-troop {
+        width: 150px;
+        top: -80px;
+        right: -20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="apply-section">
+    <div class="apply-bg"></div>
+    <div class="apply-overlay"></div>
+    
+    <div class="form-wrapper">
+      <!-- 3D Wizard overlapping the form -->
+      <img src="https://static.wikia.nocookie.net/clashofclans/images/d/d1/Wizard.png" alt="Wizard" class="overlap-troop">
+      
+      <div class="form-container">
+        <div class="form-content">
+          <h1 class="text-center" style="font-family: 'Luckiest Guy', cursive; font-size: 3.5rem; color: #fff; text-shadow: 3px 3px 0 #000, 0 0 20px rgba(255,152,0,0.5); margin-bottom: 1rem; letter-spacing: 2px; line-height: 1;">JOIN THE<br><span style="color: #ff9800;">LEGIONS</span></h1>
+          <p class="text-center" style="font-family: 'Nunito', sans-serif; color: #a1a1aa; font-weight: 700; margin-bottom: 2.5rem; font-size: 1rem;">Submit your application below. Leadership will review your war stats and reach out via Discord.</p>
+          
+          <form onsubmit="event.preventDefault(); alert('Application Submitted Successfully!'); window.location.href='/';">
+            <div class="form-group">
+              <label>Player Tag (#)</label>
+              <input type="text" placeholder="e.g. #YQ8P92U0" required>
+            </div>
+            
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <div class="form-group" style="flex: 1; min-width: 150px;">
+                <label>Town Hall</label>
+                <select required>
+                  <option value="" disabled selected>TH Level</option>
+                  <option value="16">TH 16</option>
+                  <option value="15">TH 15</option>
+                  <option value="14">TH 14</option>
+                  <option value="13">TH 13 (Maxed)</option>
+                </select>
+              </div>
+              
+              <div class="form-group" style="flex: 1; min-width: 150px;">
+                <label>War Stars</label>
+                <input type="number" placeholder="e.g. 1500" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Discord Username</label>
+              <input type="text" placeholder="e.g. clashpro#1234" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Why join us?</label>
+              <textarea rows="3" placeholder="Tell us about your war experience and attack strategies..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js" defer></script>
+  <script>
+    // Load navbar and footer dynamically
+    document.addEventListener('DOMContentLoaded', () => {
+      if(typeof loadNavbar === 'function') loadNavbar();
+      if(typeof loadFooter === 'function') loadFooter();
+    });
+  </script>
+</body>
+</html>

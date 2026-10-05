@@ -1,0 +1,301 @@
+const cocTroops = [
+  {
+    name: "Barbarian",
+    type: "Elixir",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Barbarian.png",
+    level: "Level 11",
+    target: "Ground",
+    dps: 60,
+    health: 70,
+    elixir: 20
+  },
+  {
+    name: "Archer",
+    type: "Elixir",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/Archer.png",
+    level: "Level 11",
+    target: "Ground & Air",
+    dps: 50,
+    health: 40,
+    elixir: 25
+  },
+  {
+    name: "Giant",
+    type: "Elixir",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Giant.png",
+    level: "Level 11",
+    target: "Ground",
+    dps: 70,
+    health: 90,
+    elixir: 40
+  },
+  {
+    name: "Goblin",
+    type: "Elixir",
+    color: "bg-pastel-green",
+    image: "assets/troop_models/Goblin.png",
+    level: "Level 9",
+    target: "Ground",
+    dps: 80,
+    health: 30,
+    elixir: 15
+  },
+  {
+    name: "Wall Breaker",
+    type: "Elixir",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Wall_Breaker.png",
+    level: "Level 11",
+    target: "Ground",
+    dps: 90,
+    health: 20,
+    elixir: 30
+  },
+  {
+    name: "Balloon",
+    type: "Elixir",
+    color: "bg-pastel-red",
+    image: "assets/troop_models/Balloon.png",
+    level: "Level 10",
+    target: "Ground",
+    dps: 85,
+    health: 75,
+    elixir: 60
+  },
+  {
+    name: "Wizard",
+    type: "Elixir",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Wizard.png",
+    level: "Level 11",
+    target: "Ground & Air",
+    dps: 95,
+    health: 50,
+    elixir: 50
+  },
+  {
+    name: "Healer",
+    type: "Elixir",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Healer.png",
+    level: "Level 8",
+    target: "Ground",
+    dps: 85,
+    health: 80,
+    elixir: 70
+  },
+  {
+    name: "Dragon",
+    type: "Elixir",
+    color: "bg-pastel-orange",
+    image: "assets/troop_models/Dragon.png",
+    level: "Level 10",
+    target: "Ground & Air",
+    dps: 80,
+    health: 95,
+    elixir: 80
+  },
+  {
+    name: "P.E.K.K.A",
+    type: "Elixir",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/P.E.K.K.A.png",
+    level: "Level 10",
+    target: "Ground",
+    dps: 100,
+    health: 100,
+    elixir: 90
+  },
+  {
+    name: "Baby Dragon",
+    type: "Elixir",
+    color: "bg-pastel-green",
+    image: "assets/troop_models/Baby_Dragon.png",
+    level: "Level 9",
+    target: "Ground & Air",
+    dps: 75,
+    health: 85,
+    elixir: 65
+  },
+  {
+    name: "Miner",
+    type: "Elixir",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Miner.png",
+    level: "Level 9",
+    target: "Ground",
+    dps: 80,
+    health: 70,
+    elixir: 55
+  },
+  {
+    name: "Electro Dragon",
+    type: "Elixir",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Electro_Dragon.png",
+    level: "Level 6",
+    target: "Ground & Air",
+    dps: 90,
+    health: 90,
+    elixir: 100
+  },
+  {
+    name: "Yeti",
+    type: "Elixir",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/Yeti.png",
+    level: "Level 5",
+    target: "Ground",
+    dps: 85,
+    health: 95,
+    elixir: 85
+  },
+  {
+    name: "Minion",
+    type: "Dark Elixir",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Minion.png",
+    level: "Level 11",
+    target: "Ground & Air",
+    dps: 60,
+    health: 40,
+    elixir: 20
+  },
+  {
+    name: "Hog Rider",
+    type: "Dark Elixir",
+    color: "bg-pastel-orange",
+    image: "assets/troop_models/Hog_Rider.png",
+    level: "Level 12",
+    target: "Ground",
+    dps: 80,
+    health: 75,
+    elixir: 45
+  },
+  {
+    name: "Valkyrie",
+    type: "Dark Elixir",
+    color: "bg-pastel-orange",
+    image: "assets/troop_models/Valkyrie.png",
+    level: "Level 10",
+    target: "Ground",
+    dps: 85,
+    health: 80,
+    elixir: 50
+  },
+  {
+    name: "Golem",
+    type: "Dark Elixir",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/Golem.png",
+    level: "Level 12",
+    target: "Ground",
+    dps: 40,
+    health: 100,
+    elixir: 80
+  },
+  {
+    name: "Witch",
+    type: "Dark Elixir",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/Witch.png",
+    level: "Level 6",
+    target: "Ground & Air",
+    dps: 70,
+    health: 60,
+    elixir: 75
+  },
+  {
+    name: "Lava Hound",
+    type: "Dark Elixir",
+    color: "bg-pastel-red",
+    image: "assets/troop_models/Lava_Hound.png",
+    level: "Level 6",
+    target: "Ground",
+    dps: 30,
+    health: 95,
+    elixir: 90
+  },
+  {
+    name: "Bowler",
+    type: "Dark Elixir",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Bowler.png",
+    level: "Level 7",
+    target: "Ground",
+    dps: 75,
+    health: 70,
+    elixir: 60
+  },
+  {
+    name: "Ice Golem",
+    type: "Dark Elixir",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Ice_Golem.png",
+    level: "Level 7",
+    target: "Ground",
+    dps: 40,
+    health: 85,
+    elixir: 55
+  },
+  {
+    name: "Headhunter",
+    type: "Dark Elixir",
+    color: "bg-pastel-green",
+    image: "assets/troop_models/Headhunter.png",
+    level: "Level 3",
+    target: "Ground & Air",
+    dps: 70,
+    health: 60,
+    elixir: 65
+  },
+  {
+    name: "Barbarian King",
+    type: "Hero",
+    color: "bg-pastel-yellow",
+    image: "assets/troop_models/Barbarian_King.png",
+    level: "Level 95",
+    target: "Ground",
+    dps: 95,
+    health: 100,
+    elixir: 0
+  },
+  {
+    name: "Archer Queen",
+    type: "Hero",
+    color: "bg-pastel-purple",
+    image: "assets/troop_models/Archer_Queen.png",
+    level: "Level 95",
+    target: "Ground & Air",
+    dps: 100,
+    health: 85,
+    elixir: 0
+  },
+  {
+    name: "Grand Warden",
+    type: "Hero",
+    color: "bg-pastel-blue",
+    image: "assets/troop_models/Grand_Warden.png",
+    level: "Level 70",
+    target: "Ground & Air",
+    dps: 80,
+    health: 90,
+    elixir: 0
+  },
+  {
+    name: "Royal Champion",
+    type: "Hero",
+    color: "bg-pastel-orange",
+    image: "assets/troop_models/Royal_Champion.png",
+    level: "Level 45",
+    target: "Ground & Air",
+    dps: 95,
+    health: 85,
+    elixir: 0
+  }
+];
+
+window.cocTroops = cocTroops;
